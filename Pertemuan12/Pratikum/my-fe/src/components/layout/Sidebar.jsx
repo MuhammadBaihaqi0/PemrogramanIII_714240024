@@ -17,6 +17,20 @@ const menuItems = [
     icon: "🎓",
     to: "/mahasiswa",
   },
+  {
+    id: "pengaturan",
+    label: "Pengaturan",
+    description: "Ubah password",
+    icon: "⚙️",
+    to: "/change-password",
+  },
+  {
+    id: "Profil",
+    label: "Profil Saya",
+    description: "Informasi Akun",
+    icon: "👤",
+    to: "/profile"
+  }
 ];
 
 export default function Sidebar({ isOpen, onClose }) {

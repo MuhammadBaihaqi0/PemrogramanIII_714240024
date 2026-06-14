@@ -1,12 +1,14 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/layout/AppLayout";
-import DashboardPage from "./pages/DashboardPage";
+import DashboardPage from "./pages/DashboardPages";
 import LoginPage from "./pages/LoginPage";
 import MahasiswaDetailPage from "./pages/MahasiswaDetailPage";
 import MahasiswaFormPage from "./pages/MahasiswaFormPage";
 import MahasiswaListPage from "./pages/MahasiswaListPage";
 import RegisterPage from "./pages/RegisterPage";
+import ChangePasswordPage from "./pages/ChangePasswordPage";
 import PrivateRoute from "./routes/PrivateRoute";
+import ProfilePage from "./pages/ProfilePage";
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
             path="/mahasiswa/:npm/edit"
             element={<MahasiswaFormPage mode="edit" />}
           />
+          <Route path="/change-password" element={<ChangePasswordPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Route>
 

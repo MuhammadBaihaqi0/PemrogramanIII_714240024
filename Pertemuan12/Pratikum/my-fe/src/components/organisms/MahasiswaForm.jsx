@@ -3,7 +3,7 @@ import SelectInput from "../atoms/SelectInput";
 import TextInput from "../atoms/TextInput";
 import FormField from "../molecules/FormField";
 
-const PRODI_OPTIONS = [
+export const PRODI_OPTIONS = [
   "S2 Manajemen Logistik",
   "S1 Manajemen Logistik",
   "S1 Manajemen Rekayasa",
