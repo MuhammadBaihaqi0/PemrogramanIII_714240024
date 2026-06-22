@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import Button from "../components/atoms/Button";
 import TextInput from "../components/atoms/TextInput";
-import SelectInput from "../components/atoms/Selectinput";
+import SelectInput from "../components/atoms/SelectInput";
 import PageTitle from "../components/molecules/PageTitle";
 import MahasiswaTable from "../components/organisms/MahasiswaTable";
 import { deleteMahasiswa, getMahasiswa } from "../services/api";
