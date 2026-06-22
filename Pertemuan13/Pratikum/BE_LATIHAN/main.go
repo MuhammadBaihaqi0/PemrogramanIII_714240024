@@ -6,7 +6,8 @@ import (
 	"be_latihan/router"
 	"strings"
 
-	_ "be_latihan/docs"
+	"be_latihan/docs"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -34,6 +35,13 @@ func main() {
 }))
 
 	app.Use(logger.New())
+
+	//swagger host configuration
+	swaggerHost := os.Getenv("SWAGGER_HOST")
+	if swaggerHost == "" {
+		swaggerHost = "127.0.0.1:3000"
+	}
+	docs.SwaggerInfo.Host = swaggerHost
 
 	config.InitDB()
 	// AutoMigrate membuat tabel berdasarkan Struct secara otomatis
